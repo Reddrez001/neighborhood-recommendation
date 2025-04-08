@@ -1,0 +1,139 @@
+/* client-dashboard.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f7f9f9;
+    color: #001e00;
+    line-height: 1.6;
+  }
+  
+  .header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #14a800;
+  }
+  
+  .nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #001e00;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .nav a:hover {
+    color: #14a800;
+  }
+  
+  .main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  
+  .dashboard-section {
+    margin-bottom: 2rem;
+  }
+  
+  .dashboard-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Container for job and freelancer cards */
+  .jobs-container,
+  .freelancers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .recommendedFreelancersContainer {
+   /* Container for recommended freelancers */
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: start;
+  }
+   
+
+
+
+  
+  /* Common card style for jobs and freelancers */
+  .job-card,
+  .freelancer-card {
+    background-color: #ffffff;
+
+    padding: 1rem;
+    border: 1px solid #d5e0d5;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .job-card:hover,
+  .freelancer-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .job-card h3,
+  .freelancer-card h4 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .job-card p,
+  .freelancer-card p {
+    font-size: 0.95rem;
+    color: #5e6d55;
+  }
+  
+  /* Recommended Freelancer Card Styling */
+  .freelancer-card {
+    text-align: center;
+  }
+  
+  .freelancer-img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 0.75rem;
+    border: 2px solid #d5e0d5;
+  }
+  
+  .freelancer-name {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #001e00;
+  }
+  
+  .freelancer-skills {
+    font-size: 0.9rem;
+    color: #5e6d55;
+    margin-bottom: 0.5rem;
+  }
+  
+  .freelancer-location {
+    font-size: 0.85rem;
+    color: #7a7a7a;
+  }
+  

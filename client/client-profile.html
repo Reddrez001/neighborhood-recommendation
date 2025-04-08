@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client Profile - Neighborhood Jobs</title>
+  <link rel="stylesheet" href="client-profile.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Neighborhood Jobs</div>
+    <nav class="nav">
+      <a href="client-dashboard.html">Dashboard</a>
+      <a href="client-logout.html">Logout</a>
+    </nav>
+  </header>
+  
+  <main class="main">
+    <section class="profile-section">
+      <h2>Your Profile</h2>
+      <!-- Profile details are populated by JS --> 
+      <div class="profile-details">
+        <img id="profilePicture" src="" alt="Profile Picture">
+        <p><strong>Name:</strong> <span id="profileName"></span></p>
+        <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+        <p><strong>Location:</strong> <span id="profileLocation"></span></p>
+        <p><strong>Skills Needed:</strong> <span id="profileSkillsNeeded"></span></p>
+      </div>
+      <button id="editProfile" class="btn">Edit Profile</button>
+    </section>
+  </main>
+  
+  <script src="../js/db.js"></script>
+  <script src="../js/client-profile.js"></script>
+</body>
+</html>

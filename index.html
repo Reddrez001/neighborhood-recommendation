@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neighborhood Jobs</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Neighborhood Jobs</div>
+    <nav class="nav">
+      <a href="freelancer/freelancer-signup.html">Signup as Freelancer</a>
+      <a href="client/client-signup.html">Signup as Client</a>
+      <a href="freelancer/freelancer-login.html">Login as Freelancer</a>
+      <a href="client/client-login.html">Login as Client</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <h1>Find local jobs at a glance</h1>
+      <p>Connect with clients and get hired today.</p>
+    </section>
+
+    <section class="job-listings">
+      <h2>Recommended Jobs</h2>
+      <div class="jobs-container">
+        <!-- Job cards inserted via JS (see js/index.js) or statically here -->
+        <div class="job-card">
+          <h3>Web Developer Needed</h3>
+          <p>Looking for an experienced web developer to create a responsive website...</p>
+          <p class="job-info"><span>Budget: $1500</span> • <span>Location: Remote</span></p>
+        </div>
+        <div class="job-card">
+          <h3>Graphic Designer</h3>
+          <p>Creative graphic designer needed for updating branding materials...</p>
+          <p class="job-info"><span>Budget: $800</span> • <span>Location: New York</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <script src="js/db.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
+

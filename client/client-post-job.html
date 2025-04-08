@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Post a Job - Neighborhood Jobs</title>
+  <link rel="stylesheet" href="client-post-job.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Neighborhood Jobs</div>
+    <nav class="nav">
+      <a href="client-dashboard.html">Dashboard</a>
+      <a href="client-logout.html">Logout</a>
+    </nav>
+  </header>
+  
+  <main class="main">
+    <section class="post-job-section">
+      <h2>Post a New Job</h2>
+      <form id="postJobForm">
+        <div class="form-group">
+          <label for="jobName">Job Name</label>
+          <input type="text" id="jobName" placeholder="Enter job title" required>
+        </div>
+        <div class="form-group">
+          <label for="jobDescription">Job Description</label>
+          <textarea id="jobDescription" placeholder="Enter full job description" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="jobBudget">Budget</label>
+          <input type="text" id="jobBudget" placeholder="Enter budget" required>
+        </div>
+        <div class="form-group">
+          <label for="jobLocation">Location</label>
+          <input type="text" id="jobLocation" placeholder="Enter job location" required>
+        </div>
+        <div class="form-group">
+          <label for="jobSkills">Skills Needed</label>
+          <input type="text" id="jobSkills" placeholder="e.g. Web Development, Design" required>
+        </div>
+        <!-- Additional fields as needed (communication details, milestone, etc.) -->
+        <button type="submit" class="btn">Post Job</button>
+      </form>
+    </section>
+  </main>
+  
+  <script src="../js/db.js"></script>
+  <script src="../js/client-post-job.js"></script>
+</body>
+</html>

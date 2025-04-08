@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client Dashboard - Neighborhood Jobs</title>
+  <link rel="stylesheet" href="client-dashboard.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Neighborhood Jobs</div>
+    <nav class="nav">
+      <a href="client-profile.html">Profile</a>
+      <a href="client-post-job.html">Post a Job</a>
+      <a href="client-proposal.html">View Proposals</a>
+      <a href="client-logout.html">Logout</a>
+    </nav>
+  </header>
+  
+  <main class="main">
+    <section class="dashboard-section">
+      <h2>Your Posted Jobs</h2>
+      <div id="postedJobs" class="jobs-container">
+        <!-- Dynamically insert jobs posted by the client -->
+      </div>
+    </section>
+    
+    <section class="dashboard-section">
+      <h2>Recommended Freelancers</h2>
+      <div id="recommendedFreelancers" class="freelancers-container">
+        <!-- Dynamically insert recommended freelancers based on client skills and location -->
+      </div>
+    </section>
+  </main>
+  
+  <script src="../js/db.js"></script>
+  <script src="../js/client-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Post Proposal - Neighborhood Jobs</title>
+  <link rel="stylesheet" href="freelancer-post-proposals.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Neighborhood Jobs</div>
+    <nav class="nav">
+      <a href="freelancer-proposal.html">My Proposals</a>
+      <a href="freelancer-dashboard.html">Dashboard</a>
+      <a href="freelancer-logout.html">Logout</a>
+    </nav>
+  </header>
+  
+  <main class="main">
+    <section class="post-proposal-section">
+      <h2>Write a Proposal</h2>
+      <form id="postProposalForm">
+        <div class="form-group">
+          <label for="proposalName">Proposal Name</label>
+          <input type="text" id="proposalName" placeholder="Enter proposal title" required>
+        </div>
+        <div class="form-group">
+          <label for="proposalDescription">Proposal Description</label>
+          <textarea id="proposalDescription" placeholder="Describe your proposal" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="proposalPrice">Price</label>
+          <input type="text" id="proposalPrice" placeholder="Enter your price" required>
+        </div>
+        <div class="form-group">
+          <label for="proposalMilestone">Milestone Details</label>
+          <textarea id="proposalMilestone" placeholder="Describe how the job will be done" required></textarea>
+        </div>
+        <!-- Additional fields like attachments or communication details if needed -->
+        <button type="submit" class="btn">Submit Proposal</button>
+      </form>
+    </section>
+  </main>
+  
+  <script src="../js/db.js"></script>
+  <script src="../js/freelancer-post-proposals.js"></script>
+</body>
+</html>

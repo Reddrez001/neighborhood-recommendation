@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Proposals - Neighborhood Jobs</title>
+  <link rel="stylesheet" href="freelancer-proposal.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Neighborhood Jobs</div>
+    <nav class="nav">
+      <a href="freelancer-dashboard.html">Dashboard</a>
+      <a href="freelancer-logout.html">Logout</a>
+    </nav>
+  </header>
+  
+  <main class="main">
+    <section class="proposals-section">
+      <h2>Your Proposals</h2>
+      <div id="proposalList" class="proposals-container">
+        <!-- Dynamically load proposals separated by status (draft, pending, rejected) -->
+      </div>
+    </section>
+  </main>
+  
+  <script src="../js/db.js"></script>
+  <script src="../js/freelancer-proposal.js"></script>
+</body>
+</html>

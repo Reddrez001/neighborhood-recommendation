@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Freelancer Profile - Neighborhood Jobs</title>
+  <link rel="stylesheet" href="freelancer-profile.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Neighborhood Jobs</div>
+    <nav class="nav">
+      <a href="freelancer-dashboard.html">Dashboard</a>
+      <a href="freelancer-logout.html">Logout</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="profile-section">
+      <h2>Your Profile</h2>
+      <div class="profile-details">
+        <img id="profilePicture" src="default-profile.png" alt="Profile Picture">
+        <div class="info">
+          <p><strong>Name:</strong> <span id="profileName">Freelancer Name</span></p>
+          <p><strong>Email:</strong> <span id="profileEmail">freelancer@example.com</span></p>
+          <p><strong>Location:</strong> <span id="profileLocation">City, State</span></p>
+          <p><strong>Skills:</strong> <span id="profileSkills">HTML, CSS, JavaScript</span></p>
+          <p><strong>Skill Level:</strong> <span id="profileSkillLevel">Intermediate</span></p>
+          <p><strong>About:</strong> <span id="profileDescription">A brief description about yourself...</span></p>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="editProfileBtn">Edit Profile</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/db.js"></script>
+  <script>
+    // Example script to load freelancer profile from localStorage.
+    document.addEventListener('DOMContentLoaded', () => {
+      const freelancerId = localStorage.getItem('loggedInFreelancer');
+      if (!freelancerId) {
+        window.location.href = 'freelancer-login.html';
+        return;
+      }
+
+      // Retrieve freelancer from localStorage
+      const freelancers = JSON.parse(localStorage.getItem('freelancers')) || [];
+      const freelancer = freelancers.find(f => f.id == freelancerId);
+      if (freelancer) {
+        document.getElementById('profileName').textContent = freelancer.name;
+        document.getElementById('profileEmail').textContent = freelancer.email;
+        document.getElementById('profileLocation').textContent = freelancer.location;
+        document.getElementById('profileSkills').textContent = Array.isArray(freelancer.skills) ? freelancer.skills.join(', ') : freelancer.skills;
+        document.getElementById('profileSkillLevel').textContent = freelancer.skillLevel;
+        document.getElementById('profileDescription').textContent = freelancer.description || 'No description provided.';
+        if(freelancer.profilePicture) {
+          document.getElementById('profilePicture').src = freelancer.profilePicture;
+        }
+      }
+      
+      // For demonstration, the edit button simply alerts. You can later link to an edit page.
+      document.getElementById('editProfileBtn').addEventListener('click', () => {
+        alert("Edit functionality coming soon!");
+      });
+    });
+  </script>
+</body>
+</html>

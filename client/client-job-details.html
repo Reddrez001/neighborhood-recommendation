@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Job Details - Neighborhood Jobs</title>
+  <link rel="stylesheet" href="client-job-details.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Neighborhood Jobs</div>
+    <nav class="nav">
+      <a href="client-dashboard.html">Dashboard</a>
+      <a href="client-logout.html">Logout</a>
+    </nav>
+  </header>
+  
+  <main class="main">
+    <section class="job-details">
+      <!-- Example job details; these should be dynamically populated using JS --> 
+      <h2 id="jobName">Job Name Here</h2>
+      <p id="jobDescription">Full job description goes here...</p>
+      <p id="jobBudget"><strong>Budget:</strong> $X</p>
+      <p id="jobLocation"><strong>Location:</strong> City, State</p>
+    </section>
+    
+    <section class="proposals">
+      <h3>Proposals</h3>
+      <div id="proposalContainer">
+        <!-- List proposals with status buttons (Accept / Reject) --> 
+      </div>
+    </section>
+  </main>
+  
+  <script src="../js/db.js"></script>
+  <script src="../js/client-job-details.js"></script>
+</body>
+</html>

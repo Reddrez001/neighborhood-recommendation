@@ -1,0 +1,108 @@
+/* freelancer-profile.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f7f9f9;
+    color: #001e00;
+    line-height: 1.6;
+  }
+  
+  .header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #14a800;
+  }
+  
+  .nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #001e00;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .nav a:hover {
+    color: #14a800;
+  }
+  
+  .main {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  
+  .profile-section {
+    background-color: #ffffff;
+    padding: 2rem;
+    border: 1px solid #d5e0d5;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  
+  .profile-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-details img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 2px solid #d5e0d5;
+  }
+  
+  .profile-details .info {
+    text-align: left;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .profile-details .info p {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #5e6d55;
+  }
+  
+  .actions {
+    margin-top: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #14a800;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #0e8e00;
+  }
+  

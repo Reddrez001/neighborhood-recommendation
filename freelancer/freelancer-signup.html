@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Freelancer Signup - Neighborhood Jobs</title>
+  <link rel="stylesheet" href="freelancer-signup.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Neighborhood Jobs</div>
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="freelancer-login.html">Login</a>
+    </nav>
+  </header>
+  
+  <main class="main">
+    <section class="signup-section">
+      <h2>Freelancer Signup</h2>
+      <form id="signupForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" id="location" placeholder="Your location" required>
+        </div>
+        <div class="form-group">
+          <label for="skills">Skills (comma separated)</label>
+          <input type="text" id="skills" placeholder="e.g. Web Development, Graphic Design" required>
+        </div>
+        <div class="form-group">
+          <label for="skillLevel">Skill Level</label>
+          <select id="skillLevel" required>
+            <option value="">Select Skill Level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="expert">Expert</option>
+          </select>
+        </div>
+        <div class="form-group file-group">
+          <label for="profilePicture">Profile Picture</label>
+          <input type="file" id="profilePicture">
+        </div>
+        <button type="submit" class="btn">Signup</button>
+      </form>
+      <p class="alt-action">Already have an account? <a href="freelancer-login.html">Login here</a></p>
+    </section>
+  </main>
+  
+  <script src="../js/db.js"></script>
+  <script src="../js/freelancer-signup.js"></script>
+</body>
+</html>

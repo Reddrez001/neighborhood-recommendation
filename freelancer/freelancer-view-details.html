@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Freelancer Details - Neighborhood Jobs</title>
+  <link rel="stylesheet" href="freelancer-view-details.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Neighborhood Jobs</div>
+    <nav class="nav">
+      <a href="../client/client-dashboard.html">Back to Dashboard</a>
+      <a href="../freelancer/freelancer-logout.html">Logout</a>
+    </nav>
+  </header>
+  
+  <main class="main">
+    <section class="profile-section">
+      <h2>Freelancer Details</h2>
+      <div class="profile-details">
+        <img id="profilePicture" src="default-profile.png" alt="Freelancer Profile Picture" class="profile-img">
+        <div class="info">
+          <p><strong>Name:</strong> <span id="profileName">Freelancer Name</span></p>
+          <p><strong>Email:</strong> <span id="profileEmail">freelancer@example.com</span></p>
+          <p><strong>Location:</strong> <span id="profileLocation">City, State</span></p>
+          <p><strong>Skills:</strong> <span id="profileSkills">HTML, CSS, JavaScript</span></p>
+          <p><strong>About:</strong></p>
+          <p id="profileDescription">A brief description about the freelancer goes here...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <script src="../js/db.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Retrieve freelancer ID from URL query parameters
+      const params = new URLSearchParams(window.location.search);
+      const freelancerId = params.get('id');
+      if (!freelancerId) {
+        document.querySelector('.main').innerHTML = '<p>Freelancer not found.</p>';
+        return;
+      }
+      
+      // Get freelancers from localStorage (via our helper from db.js)
+      const freelancers = JSON.parse(localStorage.getItem('freelancers')) || [];
+      const freelancer = freelancers.find(f => f.id == freelancerId);
+      
+      if (freelancer) {
+        document.getElementById('profileName').textContent = freelancer.name;
+        document.getElementById('profileEmail').textContent = freelancer.email;
+        document.getElementById('profileLocation').textContent = freelancer.location;
+        document.getElementById('profileSkills').textContent = Array.isArray(freelancer.skills) ? freelancer.skills.join(', ') : freelancer.skills;
+        document.getElementById('profileDescription').textContent = freelancer.description || 'No description provided.';
+        if (freelancer.profilePicture) {
+          document.getElementById('profilePicture').src = freelancer.profilePicture;
+        }
+      } else {
+        document.querySelector('.main').innerHTML = '<p>Freelancer not found.</p>';
+      }
+    });
+  </script>
+</body>
+</html>

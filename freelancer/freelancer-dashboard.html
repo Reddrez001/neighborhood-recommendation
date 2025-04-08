@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Freelancer Dashboard - Neighborhood Jobs</title>
+  <link rel="stylesheet" href="freelancer-dashboard.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Neighborhood Jobs</div>
+    <nav class="nav">
+      <a href="freelancer-profile.html">Profile</a>
+      <a href="freelancer-proposal.html">My Proposals</a>
+      
+      <a href="freelancer-job-details.html">Job Details</a>
+      <a href="freelancer-logout.html">Logout</a>
+    </nav>
+  </header>
+  
+  <main class="main">
+    <section class="dashboard-section">
+      <h2>Recommended Jobs</h2>
+      <div id="recommendedJobs" class="jobs-container">
+        <!-- Dynamically insert jobs matching freelancer skills/location -->
+      </div>
+    </section>
+    
+    <section class="dashboard-section">
+      <h2>Your Draft Proposals</h2>
+      <div id="draftProposals" class="proposals-container">
+        <!-- Dynamically list draft proposals -->
+      </div>
+    </section>
+  </main>
+  
+  <script src="../js/db.js"></script>
+  <script src="../js/freelancer-dashboard.js"></script>
+</body>
+</html>
